@@ -1,7 +1,6 @@
 package com.dagrest.dnesequence.util;
 
 import com.dagrest.dnesequence.exception.InvalidRootNode;
-import com.dagrest.dnesequence.exception.NonIntegerValue;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -11,18 +10,14 @@ import java.util.List;
 
 public class Util {
 	
-	public static List<Integer> ParseRequestBody(String json) throws JsonMappingException, JsonProcessingException, InvalidRootNode, NonIntegerValue {
+	public static List<Integer> ParseRequestBody(String json) throws JsonMappingException, JsonProcessingException, InvalidRootNode {
 		ObjectMapper objectMapper = new ObjectMapper();
 		JsonNode rootNode = objectMapper.readTree(json);
 		
 		if (rootNode.has("seq") && rootNode.get("seq").isArray()) {
 		    List<Integer> seqList = new ArrayList<Integer>();
 		    for (JsonNode node : rootNode.get("seq")) {
-		        if (node.isInt()) {
-		            seqList.add(node.asInt());
-		        } else {
-					throw new NonIntegerValue("incorrect request body: provided array contains non-integer value.");
-		        }
+		    	seqList.add(node.asInt());
 		    }
 		    return seqList;
 		} else {

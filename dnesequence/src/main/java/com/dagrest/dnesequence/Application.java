@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.dagrest.dnesequence")
 public class Application {
 
-    private static final Logger logger = LoggerFactory.getLogger("com.example.MyController");
+    private static final Logger logger = LoggerFactory.getLogger("com.dagrest.dnesequence.Application");
 
 	public static void main(String[] args) {
 		logger.info("Application started.");

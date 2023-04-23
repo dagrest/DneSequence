@@ -1,5 +1,5 @@
 # DNE sequence application
-This is a simple Spring boot rest api application. 
+This is a simple Spring Boot rest api application. 
 
 ## What you'll need
 Java 17  

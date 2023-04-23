@@ -10,7 +10,7 @@ https://github.com/dagrest/DneSequence/blob/main/dnesequence-0.0.1-SNAPSHOT.jar
 
 - Go to folder containing **dnesequence-0.0.1-SNAPSHOT.jar**
 
-- Run Application as: **java -jar target/dnesequence-0.0.1-SNAPSHOT.jar**
+- Run Application as: **java -jar dnesequence-0.0.1-SNAPSHOT.jar**
 
 ## Test Application
 - curl -X POST http://localhost:10000/server -H "content-type:application/json" -d '{"seq":[1,2,3]}'  

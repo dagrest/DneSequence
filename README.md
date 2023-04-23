@@ -17,11 +17,11 @@ https://github.com/dagrest/DneSequence/blob/main/dnesequence-0.0.1-SNAPSHOT.jar
 or  
 For Windows:  
 curl -X POST http://localhost:10000/server -H "content-type:application/json" -d "{\\"seq\\":[1,2,3]}"  
-Response: false  
+**Response: false**  
 - curl -X POST http://localhost:10000/server -H "content-type:application/json" -d '{"seq":[4, 1, 7, 8, 7, 2]}'  
 or  
 For Windows:  
 curl -X POST http://localhost:10000/server -H "content-type:application/json" -d "{\\"seq\\":[4, 1, 7, 8, 7, 2]}"  
-Response: true  
+**Response: true**  
 - curl -X GET http://localhost:10000/health   
-Response: OK
+**Response: OK**

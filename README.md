@@ -1,4 +1,4 @@
-# DNE sequence
+# DNE sequence application
 This is a simple Spring boot rest api application. 
 
 ## What you'll need
